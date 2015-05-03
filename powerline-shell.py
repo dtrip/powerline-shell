@@ -154,9 +154,9 @@ class DefaultColor:
     SSH_BG = 166 # medium orange
     SSH_FG = 254
 
-    REPO_CLEAN_BG = 148  # a light green color
+    REPO_CLEAN_BG = 70  # a light green color
     REPO_CLEAN_FG = 0  # black
-    REPO_DIRTY_BG = 161  # pink/red
+    REPO_DIRTY_BG = 88  # pink/red
     REPO_DIRTY_FG = 15  # white
 
     JOBS_FG = 39
@@ -207,9 +207,9 @@ class DefaultColor:
     SSH_BG = 166 # medium orange
     SSH_FG = 254
 
-    REPO_CLEAN_BG = 148  # a light green color
+    REPO_CLEAN_BG = 70  # a light green color
     REPO_CLEAN_FG = 0  # black
-    REPO_DIRTY_BG = 161  # pink/red
+    REPO_DIRTY_BG = 88  # pink/red
     REPO_DIRTY_FG = 15  # white
 
     JOBS_FG = 39
