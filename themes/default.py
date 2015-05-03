@@ -4,8 +4,8 @@ class DefaultColor:
     Please test every new segment with this theme first.
     """
     USERNAME_FG = 250
-    USERNAME_BG = 240
-    USERNAME_ROOT_BG = 124
+    USERNAME_BG = 190
+    USERNAME_ROOT_BG = 190
 
     HOSTNAME_FG = 250
     HOSTNAME_BG = 238
