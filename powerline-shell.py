@@ -19,8 +19,6 @@ class Powerline:
         'patched': {
             'lock': u'\uE0A2',
             'network': u'\uE0A2',
-            # 'separator': u'\u2B80',
-            # 'separator_thin': u'\u2B81'
             'separator': u'\uE0B0',
             'separator_thin': u'\uE0B1'
         },
@@ -133,9 +131,9 @@ class DefaultColor:
     This class should have the default colors for every segment.
     Please test every new segment with this theme first.
     """
-    USERNAME_FG = 0
+    USERNAME_FG = 250
     USERNAME_BG = 190
-    USERNAME_ROOT_BG = 124
+    USERNAME_ROOT_BG = 190
 
     HOSTNAME_FG = 250
     HOSTNAME_BG = 238
@@ -154,9 +152,9 @@ class DefaultColor:
     SSH_BG = 166 # medium orange
     SSH_FG = 254
 
-    REPO_CLEAN_BG = 70  # a light green color
+    REPO_CLEAN_BG = 148  # a light green color
     REPO_CLEAN_FG = 0  # black
-    REPO_DIRTY_BG = 88  # pink/red
+    REPO_DIRTY_BG = 161  # pink/red
     REPO_DIRTY_FG = 15  # white
 
     JOBS_FG = 39
@@ -186,20 +184,20 @@ class DefaultColor:
     This class should have the default colors for every segment.
     Please test every new segment with this theme first.
     """
-    USERNAME_FG = 0
+    USERNAME_FG = 237
     USERNAME_BG = 190
-    USERNAME_ROOT_BG = 124
+    USERNAME_ROOT_BG = 1
 
-    HOSTNAME_FG = 250
-    HOSTNAME_BG = 238
+    HOSTNAME_FG = 225
+    HOSTNAME_BG = 23
 
     HOME_SPECIAL_DISPLAY = True
     HOME_BG = 31  # blueish
     HOME_FG = 15  # white
-    PATH_BG = 237  # dark grey
+    PATH_BG = 237
     PATH_FG = 250  # light grey
     CWD_FG = 254  # nearly-white grey
-    SEPARATOR_FG = 244
+    SEPARATOR_FG = 240
 
     READONLY_BG = 124
     READONLY_FG = 254
@@ -207,9 +205,9 @@ class DefaultColor:
     SSH_BG = 166 # medium orange
     SSH_FG = 254
 
-    REPO_CLEAN_BG = 70  # a light green color
+    REPO_CLEAN_BG = 148  # a light green color
     REPO_CLEAN_FG = 0  # black
-    REPO_DIRTY_BG = 88  # pink/red
+    REPO_DIRTY_BG = 1  # red
     REPO_DIRTY_FG = 15  # white
 
     JOBS_FG = 39
@@ -351,6 +349,7 @@ def add_read_only_segment():
 
     if not os.access(cwd, os.W_OK):
         powerline.append(' %s ' % powerline.lock, Color.READONLY_FG, Color.READONLY_BG)
+        # powerline.insert(len(powerline), powerline.lock)
 
 add_read_only_segment()
 
@@ -544,8 +543,8 @@ add_jobs_segment()
 
 def add_root_indicator_segment():
     root_indicators = {
-            'bash': ' ',
-        'zsh': ' ',
+        'bash': '  ',
+        'zsh': '  ',
         'bare': ' $ ',
     }
     bg = Color.CMD_PASSED_BG
