@@ -191,13 +191,16 @@ class DefaultColor:
     HOSTNAME_FG = 225
     HOSTNAME_BG = 23
 
+    INTERFACE_FG = 220
+    INTERFACE_BG = 37
+
     HOME_SPECIAL_DISPLAY = True
     HOME_BG = 31  # blueish
     HOME_FG = 15  # white
     PATH_BG = 237
     PATH_FG = 250  # light grey
     CWD_FG = 254  # nearly-white grey
-    SEPARATOR_FG = 240
+    SEPARATOR_FG = 244
 
     READONLY_BG = 124
     READONLY_FG = 254
@@ -205,17 +208,17 @@ class DefaultColor:
     SSH_BG = 166 # medium orange
     SSH_FG = 254
 
-    REPO_CLEAN_BG = 148  # a light green color
-    REPO_CLEAN_FG = 0  # black
-    REPO_DIRTY_BG = 1  # red
+    REPO_CLEAN_BG = 35  # a light green color
+    REPO_CLEAN_FG = 149
+    REPO_DIRTY_BG = 129
     REPO_DIRTY_FG = 15  # white
 
     JOBS_FG = 39
     JOBS_BG = 238
 
-    CMD_PASSED_BG = 236
+    CMD_PASSED_BG = 148
     CMD_PASSED_FG = 15
-    CMD_FAILED_BG = 161
+    CMD_FAILED_BG = 1
     CMD_FAILED_FG = 15
 
     SVN_CHANGES_BG = 148
@@ -291,6 +294,23 @@ def add_hostname_segment():
 
 
 add_hostname_segment()
+
+
+def add_ip_addr():
+    # import socket
+    # import urllib2
+    import netifaces as ni
+    import config
+    ni.ifaddresses(config.IFACE)
+    ip = ni.ifaddresses(config.IFACE)[2][0]['addr']
+
+    # ip = socket.gethostbyname(socket.gethostname())
+
+    powerline.append(' %s ' % ip, Color.INTERFACE_FG, Color.INTERFACE_BG)
+
+add_ip_addr()
+
+
 
 
 import os

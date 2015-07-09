@@ -19,6 +19,9 @@ SEGMENTS = [
 # Show the machine's hostname. Mostly used when ssh-ing into other machines
     'hostname',
 
+# show IP Address
+    'ipaddr',
+
 # Show a padlock when ssh-ing from another machine
     'ssh',
 
@@ -50,3 +53,4 @@ SEGMENTS = [
 
 # Change the colors used to draw individual segments in your prompt
 THEME = 'dtrip'
+IFACE = 'wlan0'
