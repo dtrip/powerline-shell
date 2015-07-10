@@ -53,4 +53,4 @@ SEGMENTS = [
 
 # Change the colors used to draw individual segments in your prompt
 THEME = 'dtrip'
-IFACE = 'wlan0'
+IFACE = 'eth0'
