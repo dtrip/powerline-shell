@@ -8,7 +8,7 @@
 
 SEGMENTS = [
 # Set the terminal window title to user@host:dir
-#    'set_term_title',
+   'set_term_title',
 
 # Show current virtual environment (see http://www.virtualenv.org/)
     'virtual_env',
@@ -29,6 +29,7 @@ SEGMENTS = [
 # replaced with ellipsis ('...')
     'cwd',
 
+   'time',
 # Show a padlock if the current user has no write access to the current
 # directory
     'read_only',
@@ -47,6 +48,7 @@ SEGMENTS = [
 
 # Show number of running jobs
     'jobs',
+   'exit_code',
     'root',
 
 ]
