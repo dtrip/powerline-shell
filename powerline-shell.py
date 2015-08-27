@@ -297,8 +297,6 @@ add_hostname_segment()
 
 
 def add_ip_addr():
-    # import socket
-    # import urllib2
 
     try:
         import netifaces as ni
