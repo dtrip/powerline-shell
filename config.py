@@ -8,7 +8,7 @@
 
 SEGMENTS = [
 # Set the terminal window title to user@host:dir
-   'set_term_title',
+   # 'set_term_title',
 
 # Show current virtual environment (see http://www.virtualenv.org/)
     'virtual_env',
